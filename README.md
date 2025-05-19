@@ -24,10 +24,7 @@ A modern personal portfolio built with React, showcasing my projects, skills, an
 - **Animations**: Animate.css  
 
 - Install dependencies:
-
-bash
 npm install
-Run development server:
 
-bash
+- Run development server:
 npm start
