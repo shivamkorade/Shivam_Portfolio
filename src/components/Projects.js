@@ -8,10 +8,10 @@ import projImg4 from "../assets/img/tictactoe.jpeg";
 import projImg6 from "../assets/img/headlines24.png";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
-import 'animate.css';
-import TrackVisibility from 'react-on-screen';
+import "animate.css";
+import TrackVisibility from "react-on-screen";
 
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 export const Projects = () => {
   const [backgroundGradient, setBackgroundGradient] = useState(null);
@@ -47,7 +47,7 @@ export const Projects = () => {
       description: "Design & Development",
       date: "Mar’25 - Apr’25",
       imgUrl: projImg3,
-      link: "https://github.com/shivamkorade",
+      link: "https://github.com/shivamkorade/Shivam_Portfolio",
     },
     {
       about: "Tic Tac Toe Web App",
@@ -57,8 +57,6 @@ export const Projects = () => {
       imgUrl: projImg4,
       link: "https://github.com/shivamkorade/TicTacToe-Game-JavaScript",
     },
-    
-  
   ];
 
   useEffect(() => {
@@ -77,7 +75,9 @@ export const Projects = () => {
 
           let imageData = ctx.getImageData(0, 0, img.width, img.height);
           let data = imageData.data;
-          let r = 0, g = 0, b = 0;
+          let r = 0,
+            g = 0,
+            b = 0;
 
           for (let i = 0; i < data.length; i += 4) {
             r += data[i];
@@ -119,7 +119,7 @@ export const Projects = () => {
         setBackgroundGradient(gradient);
       })
       .catch((error) => {
-        console.error('Error calculating average color:', error);
+        console.error("Error calculating average color:", error);
       });
   }, []); // Empty dependency array ensures useEffect runs only once on component mount
 
@@ -130,17 +130,23 @@ export const Projects = () => {
           <Col xs={12}>
             <TrackVisibility>
               {({ isVisible }) => (
-                <div className={`animate__animated ${isVisible ? "animate__fadeIn" : ""}`}>
+                <div
+                  className={`animate__animated ${
+                    isVisible ? "animate__fadeIn" : ""
+                  }`}
+                >
                   <h2>Projects</h2>
                   <Tab.Container id="projects-tabs" defaultActiveKey="first">
-                    <Tab.Content id="slideInUp" className={`animate__animated ${isVisible ? "animate__slideInUp" : ""}`}>
+                    <Tab.Content
+                      id="slideInUp"
+                      className={`animate__animated ${
+                        isVisible ? "animate__slideInUp" : ""
+                      }`}
+                    >
                       <Tab.Pane eventKey="first">
                         <Row>
                           {projects.map((project, index) => (
-                            <ProjectCard
-                              key={index}
-                              {...project}
-                            />
+                            <ProjectCard key={index} {...project} />
                           ))}
                         </Row>
                       </Tab.Pane>
@@ -153,7 +159,11 @@ export const Projects = () => {
           </Col>
         </Row>
       </Container>
-      <img className="background-image-right" src={colorSharp2} alt="Background" />
+      <img
+        className="background-image-right"
+        src={colorSharp2}
+        alt="Background"
+      />
       {/* Apply background gradient dynamically */}
       <style>
         {`.project .nav.nav-pills .nav-link::before {
