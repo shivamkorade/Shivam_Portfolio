@@ -4,7 +4,7 @@ import projImg1 from "../assets/img/alumni.png";
 import projImg2 from "../assets/img/IXplorer.png";
 import projImg3 from "../assets/img/portfolio.png";
 import projImg4 from "../assets/img/tictactoe.jpeg";
-// import projImg5 from "../assets/img/project4.jpg";
+import projImg5 from "../assets/img/background.jpg";
 import projImg6 from "../assets/img/headlines24.png";
 
 import colorSharp2 from "../assets/img/color-sharp2.png";
@@ -23,7 +23,7 @@ export const Projects = () => {
       description: "Design & Development",
       date: "Feb'25 - Mar'25",
       imgUrl: projImg6,
-      link: "https://github.com/shivamkorade",
+      link: "https://github.com/shivamkorade/HeadLines24",
     },
     {
       about: "Alumni Portal for Institutes",
@@ -56,6 +56,14 @@ export const Projects = () => {
       date: "Mar’22 - Apr’22",
       imgUrl: projImg4,
       link: "https://github.com/shivamkorade/TicTacToe-Game-JavaScript",
+    },
+    {
+      about: "More...",
+      title: "Checkout my GitHub",
+      description: "",
+      date: "",
+      imgUrl: projImg5,
+      link: "https://github.com/shivamkorade/",
     },
   ];
 
